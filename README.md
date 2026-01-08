@@ -50,3 +50,13 @@ Authorization: Bearer <access_token>
 
 # to run tests
 python manage.py test patients.tests
+
+# Design Deicision
+I have used Fernet in the cryptograpthy module to encrypt SSN and possible passport number. To create ENCRYPTION_KEY use command all logic to encrpt and decrypt is included in the patient/utils.y file
+```
+from cryptography.fernet import Fernet
+print(Fernet.generate_key().decode())
+```
+
+# TODO
+If I got some more time I would have make a docker file and contanerized the application.
